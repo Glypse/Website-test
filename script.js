@@ -1,6 +1,6 @@
 if (matchMedia('(pointer:fine)').matches) {
   // Device has a mouse
-  var cursorSize = 32;
+  var cursorSize = 24;
   const hover = document.querySelectorAll('a');
 
   const coords = { x: 0, y: 0 };
@@ -51,6 +51,5 @@ if (matchMedia('(pointer:fine)').matches) {
       cursorCircle.style.setProperty('--cursorSize', cursorSize + "px");
     });
   }
-
   animateCircles();
 }

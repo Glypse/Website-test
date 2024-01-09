@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+        fill: black;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .cls-1 {
+          stroke-width: 0px;
+          fill: white;
+        }
+      }
+    </style>
+  </defs>
+  <g id="glypse_logo" data-name="glypse logo">
+    <path class="cls-1" d="M418.91,0C213.26,0,46.55,166.71,46.55,372.36s166.71,372.36,372.36,372.36,372.36-166.71,372.36-372.36S624.56,0,418.91,0ZM418.91,558.55c-102.83,0-186.18-83.36-186.18-186.18s83.36-186.18,186.18-186.18,186.18,83.36,186.18,186.18-83.36,186.18-186.18,186.18Z"/>
+    <circle class="cls-1" cx="884.36" cy="93.09" r="93.09"/>
+    <path class="cls-1" d="M535.96,1024H46.55v-186.18h489.41c49.73,0,96.49-19.37,131.65-54.53l178.2-178.2,131.65,131.65-178.2,178.2h0c-67.38,67.38-160.48,109.06-263.3,109.06Z"/>
+  </g>
+</svg>

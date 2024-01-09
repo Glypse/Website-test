@@ -1,7 +1,21 @@
+@font-face {
+    font-family: satoshi;
+    font-style: normal;
+    font-weight: 400;
+    src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: satoshi;
+    font-style: normal;
+    font-weight: 700;
+    src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Bold.woff) format('woff');
+}
+
 * {
     --scrolbar-vis: none;
-    --highlight-color: white;
-    --highlight-bg-color: black;
+    --highlight-color: black;
+    --highlight-bg-color: white;
     margin: 0;
     border: 0;
     padding: 0;
@@ -16,16 +30,32 @@
     display: var(--scrolbar-vis);  /* Safari and Chrome */
 }
 
-@media (max-width: 800px) {
+@media (prefers-color-scheme: light) {
+    * {
+        --highlight-color: white !important;
+        --highlight-bg-color: black !important;
+    }
+}
+
+@media (pointer:none), (pointer:coarse) {
     * {
         font-size: 3dvw;
+    }
+
+    @media (min-width: 600px) and (orientation:landscape) {
+        * {
+            font-size: 1dvw;
+        }
     }
 }
 
 body {
-    background-color: hsl(0, 0%, 0%);
+    background-color: var(--highlight-bg-color);
     font-family: 'Satoshi';
-    color: black;
+    font-feature-settings: 'ss02', 'ss03';
+    -moz-font-feature-settings: "ss02" "ss03";
+    -webkit-font-feature-settings: "ss02" "ss03";
+    color: var(--highlight-bg-color);
     font-variant-ligatures: discretionary-ligatures;
     hyphens: auto;
     margin: 1px;
@@ -50,16 +80,17 @@ body {
 }
 
 .cursorCircle {
+    position: relative;
     --cursorSize: 100px;
     height: var(--cursorSize);
     width: var(--cursorSize);
     border-radius: 50%;
     background-color: white;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 200;
+    left: -200;
     pointer-events: none;
-    z-index: 99999999; 
+    z-index: 99999999 !important; 
     transition: all 200ms ease-out;
 }
 
@@ -71,7 +102,14 @@ h1 {
 h2 {
     --textSize: 4em;
     font-size: var(--textSize);
-    line-height: 1em;
+    line-height: 1.3em;
+    font-weight: 400;
+}
+
+h3 {
+    --textSize: 2em;
+    font-size: var(--textSize);
+    line-height: 1.3em;
     font-weight: 400;
 }
 
@@ -82,18 +120,45 @@ p {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--highlight-bg-color);
     font-weight: 700;
     --textSize: 1em;
     font-size: var(--textSize);
-    border-bottom: calc(var(--textSize)/20) solid black;
+    border-bottom: calc(var(--textSize)/20) solid var(--highlight-bg-color);
 }
 
 body:has(a:hover) .cursorCircle {
     transform: scale(5);
-  }
+}
+
+b {
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.logoBackground {
+    position: relative;
+    background-image: url(imgs/logo_anim.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.logoBackground h1 {
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: exclusion;
+}
 
 .hero-container {
+    display: grid;
+    column-gap: 0;
+    row-gap: 0;
+    grid-template-columns: 1fr 2fr;
+}
+
+.hero2-container {
     display: grid;
     column-gap: 0;
     row-gap: 0;
@@ -104,16 +169,11 @@ body:has(a:hover) .cursorCircle {
     margin: 1px;
     padding: 1.5em;
     border-radius: 1.5em;
-    background-color: white;
+    background-color: var(--highlight-color);
+    transition: all 200ms ease;
 }
 
-.hero-left-container {
-}
-
-.hero-right-container {
-}
-
-.container1 {
+.containerone {
     text-align: center;
 }
 
@@ -128,17 +188,50 @@ body:has(a:hover) .cursorCircle {
     text-align: center;
 }
 
+.email:hover {
+    background-color: crimson;
+}
+
+.products:hover {
+    background-color: #8c44f7;
+}
+
+.behance:hover {
+    background-color: #0046cb;
+}
+
+.works {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    aspect-ratio: 1;
+}
+
+.workone {
+    background-image: url(imgs/Blanks.jpeg);
+}
+
+.worktwo {
+    background-image: url(imgs/logoRender.png);
+}
+
+.workthree {
+    background-image: url(imgs/TGD.png);
+}
+
 @media (max-width: 900px) {
     .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+    .hero2-container {
       grid-template-columns: 1fr;
-    }
-    .container1 {
-        margin-top: 0em;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .threecontainer {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 }
