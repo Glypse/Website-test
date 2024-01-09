@@ -1,0 +1,144 @@
+* {
+    --scrolbar-vis: none;
+    --highlight-color: white;
+    --highlight-bg-color: black;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    -ms-overflow-style: var(--scrolbar-vis);  /* Internet Explorer 10+ */
+    scrollbar-width: var(--scrolbar-vis);  /* Firefox */
+    box-sizing: border-box;
+    cursor: none;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar { 
+    display: var(--scrolbar-vis);  /* Safari and Chrome */
+}
+
+@media (max-width: 800px) {
+    * {
+        font-size: 3dvw;
+    }
+}
+
+body {
+    background-color: hsl(0, 0%, 0%);
+    font-family: 'Satoshi';
+    color: black;
+    font-variant-ligatures: discretionary-ligatures;
+    hyphens: auto;
+    margin: 1px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--highlight-color);
+    background: var(--highlight-bg-color);
+}
+
+::selection {
+    color: var(--highlight-color);
+    background: var(--highlight-bg-color);
+}
+
+.cursorGroup {
+    mix-blend-mode: exclusion;
+}
+
+.cursorCircle0 {
+    background-color: transparent !important;
+}
+
+.cursorCircle {
+    --cursorSize: 100px;
+    height: var(--cursorSize);
+    width: var(--cursorSize);
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; 
+    transition: all 200ms ease-out;
+}
+
+h1 {
+    font-size: 8em;
+    line-height: 1em;
+}
+
+h2 {
+    --textSize: 4em;
+    font-size: var(--textSize);
+    line-height: 1em;
+    font-weight: 400;
+}
+
+p {
+    --textSize: 1em;
+    font-size: var(--textSize);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    --textSize: 1em;
+    font-size: var(--textSize);
+    border-bottom: calc(var(--textSize)/20) solid black;
+}
+
+body:has(a:hover) .cursorCircle {
+    transform: scale(5);
+  }
+
+.hero-container {
+    display: grid;
+    column-gap: 0;
+    row-gap: 0;
+    grid-template-columns: 2fr 1fr;
+}
+
+.container {
+    margin: 1px;
+    padding: 1.5em;
+    border-radius: 1.5em;
+    background-color: white;
+}
+
+.hero-left-container {
+}
+
+.hero-right-container {
+}
+
+.container1 {
+    text-align: center;
+}
+
+.threecontainer {
+    display: grid;
+    column-gap: 0;
+    row-gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.containerofthree {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+    }
+    .container1 {
+        margin-top: 0em;
+    }
+}
+
+@media (max-width: 800px) {
+    .threecontainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
