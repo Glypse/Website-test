@@ -59,6 +59,7 @@ body {
     font-variant-ligatures: discretionary-ligatures;
     hyphens: auto;
     margin: 1px;
+    box-sizing: border-box;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -70,6 +71,26 @@ body {
     color: var(--highlight-color);
     background: var(--highlight-bg-color);
 }
+
+html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
 
 .cursorGroup {
     mix-blend-mode: exclusion;
@@ -187,7 +208,7 @@ b {
     padding: 1.5em;
     border-radius: 1.5em;
     background-color: var(--highlight-color);
-    transition: all 200ms ease;
+    transition: background-color 200ms ease;
 }
 
 .containerone {
