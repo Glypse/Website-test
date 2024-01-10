@@ -1,16 +1,8 @@
-@font-face {
-    font-family: satoshi;
-    font-style: normal;
-    font-weight: 400;
-    src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Regular.woff) format('woff');
-}
-
-@font-face {
-    font-family: satoshi;
-    font-style: normal;
-    font-weight: 700;
-    src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Bold.woff) format('woff');
-}
+@font-face{font-family:satoshi;font-style:normal;font-weight:400;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Regular.woff) format('woff')}
+/*@font-face{font-family:satoshi;font-style:italic;font-weight:400;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Italic.woff) format('woff')}
+*/
+@font-face{font-family:satoshi;font-style:normal;font-weight:700;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Bold.woff) format('woff')}
+@font-face{font-family:satoshi;font-style:italic;font-weight:700;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-BoldItalic.woff) format('woff')}
 
 * {
     --scrolbar-vis: none;
@@ -139,13 +131,21 @@ p {
     font-size: var(--textSize);
 }
 
-a {
+.textLink {
     text-decoration: none;
     color: var(--highlight-bg-color);
     font-weight: 700;
     --textSize: 1em;
     font-size: var(--textSize);
     border-bottom: calc(var(--textSize)/20) solid var(--highlight-bg-color);
+}
+
+.noUnderBorder {
+    border-bottom: 0 !important;
+}
+
+.twoPxMarginBottom {
+    margin-bottom: 2px !important;
 }
 
 body:has(a:hover) .cursorCircle {
@@ -182,6 +182,10 @@ b {
     }
 }
 
+.regularweight {
+    font-weight: 400;
+}
+
 .logoBackground h1 {
     color: white;
     position: relative;
@@ -208,22 +212,27 @@ b {
     padding: 1.5em;
     border-radius: 1.5em;
     background-color: var(--highlight-color);
-    transition: background-color 200ms ease;
+    transition: background-color 400ms ease;
 }
 
 .containerone {
     text-align: center;
 }
 
-.threecontainer {
+.threecontainers {
     display: grid;
     column-gap: 0;
     row-gap: 0;
     grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
 }
 
 .containerofthree {
     text-align: center;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .email:hover {
@@ -231,11 +240,17 @@ b {
 }
 
 .products:hover {
-    background-color: #8c44f7;
+    background-color: #51dd00;
 }
 
 .behance:hover {
     background-color: #0046cb;
+}
+
+@media (prefers-color-scheme: light) {
+    .behance:hover {
+        background-color: #0d62ff;
+    }
 }
 
 .works {
@@ -255,7 +270,7 @@ b {
 }
 
 .workthree {
-    background-image: url(imgs/TGD.png);
+    background-image: url(imgs/TonanLogo.svg);
 }
 
 @media (max-width: 900px) {
@@ -269,7 +284,7 @@ b {
 }
 
 @media (max-width: 600px) {
-    .threecontainer {
+    .threecontainers {
         grid-template-columns: 1fr;
     }
 }
