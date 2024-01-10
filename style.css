@@ -131,6 +131,10 @@ p {
     font-size: var(--textSize);
 }
 
+i {
+    font-size: var(--textSize);
+}
+
 .textLink {
     text-decoration: none;
     color: var(--highlight-bg-color);
