@@ -1,3 +1,5 @@
+//--------------------MOUSE--------------------
+
 if (matchMedia('(pointer:fine)').matches) {
   // Device has a mouse
   var cursorSize = 24;

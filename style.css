@@ -138,14 +138,31 @@ b {
 
 .logoBackground {
     position: relative;
-    background-image: url(imgs/logo_anim.gif);
+    background-image: url('imgs/logo_anim.gif'), linear-gradient(to right, black, black);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     z-index: -1;
 }
 
+@media (prefers-color-scheme: light) {
+    .logoBackground {
+        background-image: url('imgs/logo_anim.gif'), linear-gradient(to right, black, black);
+        filter: invert();
+    }
+    .logoBackground ::-moz-selection { /* Code for Firefox */
+        color: var(--highlight-bg-color);
+        background: var(--highlight-color);
+    }
+    
+    .logoBackground ::selection {
+        color: var(--highlight-bg-color);
+        background: var(--highlight-color);
+    }
+}
+
 .logoBackground h1 {
+    color: white;
     position: relative;
     z-index: 2;
     mix-blend-mode: exclusion;
