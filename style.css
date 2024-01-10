@@ -16,6 +16,7 @@
     box-sizing: border-box;
     cursor: none;
     scroll-behavior: smooth;
+    font-kerning: none;
 }
 
 *::-webkit-scrollbar { 
@@ -66,26 +67,27 @@ body {
 
 html.lenis {
     height: auto;
-  }
-  
-  .lenis.lenis-smooth {
+}
+
+.lenis.lenis-smooth {
     scroll-behavior: auto;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
     overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
+}
+
+.lenis.lenis-stopped {
     overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
+}
+
+.lenis.lenis-scrolling iframe {
     pointer-events: none;
-  }
+}
 
 .cursorGroup {
     mix-blend-mode: exclusion;
+    z-index: 99999999 !important; 
 }
 
 .cursorCircle0 {
@@ -108,8 +110,9 @@ html.lenis {
 }
 
 h1 {
-    font-size: 8em;
+    --textSize: 8em;
     line-height: 1em;
+    font-size: 8em;
 }
 
 h2 {
@@ -161,28 +164,21 @@ b {
     font-size: 1em;
 }
 
-.logoBackground {
-    position: relative;
-    background-image: url('imgs/logo_anim.gif'), linear-gradient(to right, black, black);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    z-index: -1;
+.textLink, h1, h2, h3, h4, h5, h6, p, b, i {
+    transition: all 400ms ease;
 }
 
-@media (prefers-color-scheme: light) {
-    .logoBackground {
-        background-image: url('imgs/logo_anim.gif'), linear-gradient(to right, black, black);
-        filter: invert();
-    }
-    .logoBackground ::-moz-selection { /* Code for Firefox */
-        color: var(--highlight-bg-color);
-        background: var(--highlight-color);
-    }
-    
-    .logoBackground ::selection {
-        color: var(--highlight-bg-color);
-        background: var(--highlight-color);
+.logoHero{
+    position: relative;
+    mix-blend-mode: exclusion;
+    z-index: 1;
+    height: 1em;
+    transform: translate(0, 27.5%);
+}
+
+@media (pointer:none), (pointer:coarse) {
+    .logoHero{
+        height: 8em;
     }
 }
 
@@ -190,25 +186,30 @@ b {
     font-weight: 400;
 }
 
-.logoBackground h1 {
-    color: white;
-    position: relative;
-    z-index: 2;
-    mix-blend-mode: exclusion;
-}
-
 .hero-container {
     display: grid;
     column-gap: 0;
     row-gap: 0;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+.laCambre:hover{
+    color: #EE0002;
+}
+
+.instaLink:hover {
+  background: linear-gradient(90deg, #ffd600, #ff7A00, #FF0069, #D300C5, #7638FA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 .hero2-container {
     display: grid;
     column-gap: 0;
     row-gap: 0;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .container {
@@ -239,22 +240,22 @@ b {
     justify-content: center;
 }
 
+.sizeOfH3 {
+    font-size: 2em;
+}
+
 .email:hover {
     background-color: crimson;
 }
 
 .products:hover {
-    background-color: #51dd00;
+    background-color: greenyellow;
+    color: black;
 }
 
 .behance:hover {
     background-color: #0046cb;
-}
-
-@media (prefers-color-scheme: light) {
-    .behance:hover {
-        background-color: #0d62ff;
-    }
+    color: white;
 }
 
 .works {
