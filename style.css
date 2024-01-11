@@ -2,12 +2,12 @@
 /*@font-face{font-family:satoshi;font-style:italic;font-weight:400;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Italic.woff) format('woff')}
 */
 @font-face{font-family:satoshi;font-style:normal;font-weight:700;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-Bold.woff) format('woff')}
-@font-face{font-family:satoshi;font-style:italic;font-weight:700;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-BoldItalic.woff) format('woff')}
-
+/*@font-face{font-family:satoshi;font-style:italic;font-weight:700;src:local('Satoshi'),url(https://fonts.cdnfonts.com/s/85546/Satoshi-BoldItalic.woff) format('woff')}
+*/
 * {
     --scrolbar-vis: none;
-    --highlight-color: black;
-    --highlight-bg-color: white;
+    --boxes-color: black;
+    --normal-text-color: white;
     margin: 0;
     border: 0;
     padding: 0;
@@ -25,8 +25,8 @@
 
 @media (prefers-color-scheme: light) {
     * {
-        --highlight-color: white !important;
-        --highlight-bg-color: black !important;
+        --boxes-color: white !important;
+        --normal-text-color: black !important;
     }
 }
 
@@ -43,12 +43,13 @@
 }
 
 body {
-    background-color: var(--highlight-bg-color);
-    font-family: 'Satoshi';
+    background-color: var(--normal-text-color);
+    font: inherit;
+    font-family: 'Satoshi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-feature-settings: 'ss02', 'ss03';
     -moz-font-feature-settings: "ss02" "ss03";
     -webkit-font-feature-settings: "ss02" "ss03";
-    color: var(--highlight-bg-color);
+    color: var(--normal-text-color);
     font-variant-ligatures: discretionary-ligatures;
     hyphens: auto;
     margin: 1px;
@@ -56,13 +57,13 @@ body {
 }
 
 ::-moz-selection { /* Code for Firefox */
-    color: var(--highlight-color);
-    background: var(--highlight-bg-color);
+    color: var(--boxes-color);
+    background: var(--normal-text-color);
 }
 
 ::selection {
-    color: var(--highlight-color);
-    background: var(--highlight-bg-color);
+    color: var(--boxes-color);
+    background: var(--normal-text-color);
 }
 
 html.lenis {
@@ -86,27 +87,27 @@ html.lenis {
 }
 
 .cursorGroup {
+    position: relative;
     mix-blend-mode: exclusion;
-    z-index: 99999999 !important; 
-}
-
-.cursorCircle0 {
-    background-color: transparent !important;
+    z-index: 99999999; 
 }
 
 .cursorCircle {
-    position: relative;
-    --cursorSize: 100px;
-    height: var(--cursorSize);
-    width: var(--cursorSize);
+    position: fixed;
+    height: 24px;
+    width: 24px;
     border-radius: 50%;
     background-color: white;
-    position: fixed;
     top: 200;
-    left: -200;
+    left: 200;
     pointer-events: none;
-    z-index: 99999999 !important; 
-    transition: all 200ms ease-out;
+
+    transition: transform 400ms ease;
+    -webkit-transition: transform 400ms ease;
+}
+
+.cursorCircle0 {
+    background-color: transparent;
 }
 
 h1 {
@@ -140,11 +141,11 @@ i {
 
 .textLink {
     text-decoration: none;
-    color: var(--highlight-bg-color);
+    color: var(--normal-text-color);
     font-weight: 700;
     --textSize: 1em;
     font-size: var(--textSize);
-    border-bottom: calc(var(--textSize)/20) solid var(--highlight-bg-color);
+    border-bottom: calc(var(--textSize)/20) solid var(--normal-text-color);
 }
 
 .noUnderBorder {
@@ -164,7 +165,7 @@ b {
     font-size: 1em;
 }
 
-.textLink, h1, h2, h3, h4, h5, h6, p, b, i {
+h1, h2, h3, h4, h5, h6, p, .textLink {
     transition: all 400ms ease;
 }
 
@@ -197,12 +198,77 @@ b {
     color: #EE0002;
 }
 
-.instaLink:hover {
-  background: linear-gradient(90deg, #ffd600, #ff7A00, #FF0069, #D300C5, #7638FA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Don't mind, just the absolute worst way to animate a gradient. Not kidding, none of the other techniques worked, but it's painfully bad. Works fine though. */
 
+@property --a {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: white;
+}
+@property --b {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: white;
+}
+@property --c {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: white;
+}
+@property --d {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: white;
+}
+@property --e {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: white;
+}
+@media (prefers-color-scheme: light) {
+    @property --a {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: black;
+    }
+    @property --b {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: black;
+    }
+    @property --c {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: black;
+    }
+    @property --d {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: black;
+    }
+    @property --e {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: black;
+    }
+}
+
+/* Back to normal */
+
+.instaLink {
+    transition: --a 400ms ease, --b 400ms ease, --c 400ms ease, --d 400ms ease, --e 400ms ease;
+    background: linear-gradient(90deg, var(--a), var(--b), var(--c), var(--d), var(--e));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instaLink:hover {
+    --a: #ffd600;
+    --b: #ff7A00;
+    --c: #FF0069;
+    --d: #D300C5;
+    --e: #7638FA;
 }
 
 .hero2-container {
@@ -216,7 +282,7 @@ b {
     margin: 1px;
     padding: 1.5em;
     border-radius: 1.5em;
-    background-color: var(--highlight-color);
+    background-color: var(--boxes-color);
     transition: background-color 400ms ease;
 }
 
@@ -246,6 +312,7 @@ b {
 
 .email:hover {
     background-color: crimson;
+    color: white;
 }
 
 .products:hover {
@@ -278,7 +345,7 @@ b {
     background-image: url(imgs/TonanLogo.svg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .hero-container {
         grid-template-columns: 1fr;
       }
@@ -293,5 +360,3 @@ b {
         grid-template-columns: 1fr;
     }
 }
-
-/* what */
