@@ -16,7 +16,6 @@
     box-sizing: border-box;
     cursor: none;
     scroll-behavior: smooth;
-    font-kerning: none;
 }
 
 *::-webkit-scrollbar { 
@@ -89,7 +88,7 @@ html.lenis {
 .cursorGroup {
     position: relative;
     mix-blend-mode: exclusion;
-    z-index: 99999999; 
+    z-index: 99999999;
 }
 
 .cursorCircle {
@@ -108,6 +107,10 @@ html.lenis {
 
 .cursorCircle0 {
     background-color: transparent;
+}
+
+body:has(a:hover) .cursorCircle {
+    transform: scale(5);
 }
 
 h1 {
@@ -148,16 +151,16 @@ i {
     border-bottom: calc(var(--textSize)/20) solid var(--normal-text-color);
 }
 
+.defaultTextLink:hover {
+    color: hsl(85, 100%, 50%)
+}
+
 .noUnderBorder {
     border-bottom: 0 !important;
 }
 
 .twoPxMarginBottom {
     margin-bottom: 2px !important;
-}
-
-body:has(a:hover) .cursorCircle {
-    transform: scale(5);
 }
 
 b {
@@ -185,6 +188,7 @@ h1, h2, h3, h4, h5, h6, p, .textLink {
 
 .regularweight {
     font-weight: 400;
+    line-height: 2.25em;
 }
 
 .hero-container {
@@ -198,77 +202,19 @@ h1, h2, h3, h4, h5, h6, p, .textLink {
     color: #EE0002;
 }
 
-/* Don't mind, just the absolute worst way to animate a gradient. Not kidding, none of the other techniques worked, but it's painfully bad. Works fine though. */
-
-@property --a {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: white;
-}
-@property --b {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: white;
-}
-@property --c {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: white;
-}
-@property --d {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: white;
-}
-@property --e {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: white;
-}
-@media (prefers-color-scheme: light) {
-    @property --a {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: black;
-    }
-    @property --b {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: black;
-    }
-    @property --c {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: black;
-    }
-    @property --d {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: black;
-    }
-    @property --e {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: black;
-    }
-}
-
-/* Back to normal */
-
 .instaLink {
-    transition: --a 400ms ease, --b 400ms ease, --c 400ms ease, --d 400ms ease, --e 400ms ease;
-    background: linear-gradient(90deg, var(--a), var(--b), var(--c), var(--d), var(--e));
-    -webkit-background-clip: text;
+    background-image: url(imgs/InstaGradient.svg);
+    background-color: var(--normal-text-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .instaLink:hover {
-    --a: #ffd600;
-    --b: #ff7A00;
-    --c: #FF0069;
-    --d: #D300C5;
-    --e: #7638FA;
+    background-image: url(imgs/InstaGradient.svg);
+    color: rgba(0, 0, 0, 0);
 }
 
 .hero2-container {
@@ -284,6 +230,7 @@ h1, h2, h3, h4, h5, h6, p, .textLink {
     border-radius: 1.5em;
     background-color: var(--boxes-color);
     transition: background-color 400ms ease;
+    -webkit-transition: background-color 400ms ease;
 }
 
 .containerone {
@@ -310,6 +257,11 @@ h1, h2, h3, h4, h5, h6, p, .textLink {
     font-size: 2em;
 }
 
+.underline {
+    border-bottom: calc(var(--textSize)/20) solid var(--normal-text-color);
+    transition: border-bottom 400ms ease;
+}
+
 .email:hover {
     background-color: crimson;
     color: white;
@@ -318,6 +270,10 @@ h1, h2, h3, h4, h5, h6, p, .textLink {
 .products:hover {
     background-color: greenyellow;
     color: black;
+}
+
+.products:hover:has(.underline) .underline {
+    border-bottom: calc(var(--textSize)/20) solid black;
 }
 
 .behance:hover {
