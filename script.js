@@ -138,20 +138,21 @@ function setupResizeObserver() {
 // TEXT ANIMATION
 
 function animateText() {
-    const containers = gsap.utils.toArray('.container');
+    const lines = gsap.utils.toArray('.line');
 
-    containers.forEach(container => {
-        const words = container.querySelectorAll('.word');
+    lines.forEach(line => {
+        const words = line.querySelectorAll('.word');
 
         gsap.to(words, {
             y: 0,
             stagger: 0.025,
+            delay: 0.001,
             duration: 0,
             scrollTrigger: {
-                markers: false,
-                trigger: container,
-                start: 'top+=100px bottom',
-                end: 'bottom-=100px top',
+                markers: true,
+                trigger: line,
+                start: 'top 90%',
+                end: 'bottom 10%',
                 toggleActions: 'play reverse play reverse',
             }
         });
