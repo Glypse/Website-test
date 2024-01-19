@@ -136,7 +136,7 @@ function setupResizeObserver() {
 
 
 // TEXT ANIMATION
-
+/*
 function animateText() {
     const lines = gsap.utils.toArray('.line');
 
@@ -149,7 +149,7 @@ function animateText() {
             delay: 0.001,
             duration: 0,
             scrollTrigger: {
-                markers: true,
+                markers: false,
                 trigger: line,
                 start: 'top 90%',
                 end: 'bottom 10%',
@@ -161,4 +161,11 @@ function animateText() {
 
 setupResizeObserver().then(() => {
     animateText();
-});
+});*/
+
+gsap.to('.word', {
+    y: 0,
+    stagger: 0.025,
+    delay: 0,
+    duration: 0,
+})
