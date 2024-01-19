@@ -68,7 +68,9 @@ if (matchMedia('(pointer:fine)').matches) {
         animateCircles();
     });
 }
-  
+
+
+
 // LENIS Smooth Scroll
 
 const lenis = new Lenis({
@@ -87,18 +89,9 @@ requestAnimationFrame(raf)
 
 requestAnimationFrame(raf)
 
-//Refresh on window resize
-// Should do a better fix by implementing the responsive text with splitype
-/*
-window.addEventListener('resize', function () { 
-    "use strict";
-    window.location.reload(); 
-});
-*/
 
-/*
-const text = new SplitType('.splitMe', { types: 'lines, words' })
-*/
+
+// SPLIT TYPE
 
 // This would be a reference to the container element that contains split text
 const containerElement = document.body;
@@ -140,45 +133,31 @@ function setupResizeObserver() {
     });
 }
 
+
+
 // TEXT ANIMATION
 
-// Wrap the animation in a function
 function animateText() {
-    gsap.to('.word', {
-        y: 0,
-        stagger: 0.025,
-        delay: 0,
-        duration: 0,
+    const containers = gsap.utils.toArray('.container');
+
+    containers.forEach(container => {
+        const words = container.querySelectorAll('.word');
+
+        gsap.to(words, {
+            y: 0,
+            stagger: 0.025,
+            duration: 0,
+            scrollTrigger: {
+                markers: false,
+                trigger: container,
+                start: 'top+=100px bottom',
+                end: 'bottom-=100px top',
+                toggleActions: 'play reverse play reverse',
+            }
+        });
     });
 }
 
-// Call the setupResizeObserver function and wait for the Promise to resolve before animating
 setupResizeObserver().then(() => {
     animateText();
 });
-
-
-
-
-
-/*
-var words = gsap.utils.toArray('.word');
-
-words.forEach((word) => {
-  
-  gsap.to(word, {
-    y: 0,
-    stagger: 0.025,
-    delay: 0,
-    duration: 0,
-    scrollTrigger: {
-        trigger: word,
-        start: 'top 85%',
-        end: 'bottom 15%',
-        scrub: false,
-        markers: true,
-    }
-});
-  
-})
-*/
