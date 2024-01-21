@@ -92,6 +92,17 @@ requestAnimationFrame(raf)
 
 
 // SPLIT TYPE
+/*
+document.addEventListener("DOMContentLoaded", function(addSplitMe) {
+    // Select all h1, h2, h3, h4, h5, h6, and p elements
+    var elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
+  
+    // Add the class "splitMe" to each selected element
+    elements.forEach(function(element) {
+      element.classList.add("splitMe");
+    });
+  });
+*/
 
 // This would be a reference to the container element that contains split text
 const containerElement = document.body;
@@ -124,7 +135,7 @@ function handleResize(entries) {
 function setupResizeObserver() {
     return new Promise(resolve => {
         // This example uses lodash#debounce so the split method only gets called once
-        // after the resizing is complete.
+        // after the resizing is complete.x
         const resizeObserver = new ResizeObserver(_.debounce(entries => {
             handleResize(entries);
             resolve(); // Resolve the Promise once the ResizeObserver is set up
@@ -136,12 +147,12 @@ function setupResizeObserver() {
 
 
 // TEXT ANIMATION
-/*
-function animateText() {
-    const lines = gsap.utils.toArray('.line');
 
-    lines.forEach(line => {
-        const words = line.querySelectorAll('.word');
+function animateText() {
+    const containers = gsap.utils.toArray('.container');
+
+    containers.forEach(container => {
+        const words = container.querySelectorAll('.word');
 
         gsap.to(words, {
             y: 0,
@@ -149,8 +160,8 @@ function animateText() {
             delay: 0.001,
             duration: 0,
             scrollTrigger: {
-                markers: false,
-                trigger: line,
+                markers: true,
+                trigger: container,
                 start: 'top 90%',
                 end: 'bottom 10%',
                 toggleActions: 'play reverse play reverse',
@@ -161,11 +172,12 @@ function animateText() {
 
 setupResizeObserver().then(() => {
     animateText();
-});*/
-
+});
+/*
 gsap.to('.word', {
     y: 0,
     stagger: 0.025,
     delay: 0,
     duration: 0,
 })
+*/

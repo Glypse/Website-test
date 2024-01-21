@@ -85,6 +85,7 @@ html.lenis {
 }
 
 /* CURSOR */
+
 .cursorGroup {
     position: relative;
     mix-blend-mode: exclusion;
@@ -283,12 +284,16 @@ p {
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
+    text-decoration: underline var(--normal-text-color);
+    -webkit-text-decoration: underline var(--normal-text-color);
+    text-underline-offset: var(--text-underline-offset);
+    text-decoration-thickness: var(--text-decoration-thickness);
 }
 
 .instaLink:hover .word {
     background-color: var(--boxes-color);
     background-image: url(imgs/InstaGradient.svg);
-    color: rgba(0, 0, 0, 0);
+    color: transparent;
 }
 
 .regularWeight .word, a {
