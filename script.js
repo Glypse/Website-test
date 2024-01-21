@@ -147,7 +147,7 @@ function setupResizeObserver() {
 
 
 // TEXT ANIMATION
-
+/*
 function animateText() {
     const containers = gsap.utils.toArray('.container');
 
@@ -173,11 +173,10 @@ function animateText() {
 setupResizeObserver().then(() => {
     animateText();
 });
-/*
+*/
 gsap.to('.word', {
     y: 0,
     stagger: 0.025,
     delay: 0,
     duration: 0,
 })
-*/
