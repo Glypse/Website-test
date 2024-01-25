@@ -14,6 +14,9 @@
     --scrolbar-vis: none;
     --boxes-color: black;
     --normal-text-color: white;
+    --boxes-outline-color: hsl(0, 0%, 20%);
+    --boxes-outline-hover-color: hsl(0, 0%, 10%);
+    --container-margins: 0.5rem;
     margin: 0;
     border: 0;
     padding: 0;
@@ -46,8 +49,8 @@
 }
 
 body {
-    background-color: var(--normal-text-color);
-    margin: 1px;
+    background-color: var(--boxes-color);
+    margin: var(--container-margins);
 }
 
 ::selection {
@@ -60,6 +63,8 @@ body {
     * {
         --boxes-color: white;
         --normal-text-color: black;
+        --boxes-outline-color: hsl(0, 0%, 90%);
+        --boxes-outline-hover-color: hsl(0, 0%, 95%);
     }
 }
 
@@ -165,6 +170,10 @@ p {
     font-size: 1rem;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 /* GRIDS */
 
 .grid {
@@ -195,27 +204,23 @@ p {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .gridOfThings {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 
 .container {
-    margin: 1px;
+    margin: var(--container-margins);
     padding: 1.5rem;
     border-radius: 1.5rem;
     background-color: var(--boxes-color);
     transition: background-color 400ms ease;
+    border: 1px solid var(--boxes-outline-color);
 }
 
-.centeredContent {
-    text-align: center;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 4rem;
+.container:hover {
+    background-color: var(--boxes-outline-hover-color);
 }
 
 .containerImage {
@@ -229,6 +234,9 @@ p {
 /* GRIDS UNDER MEDIA QUERIES */
 
 @media (max-width: 800px) {
+    .gridOneOneOne {
+        grid-template-columns: 1fr;
+    }
     .gridTwoOne {
         grid-template-columns: 1fr;
       }
@@ -238,18 +246,14 @@ p {
     }
 }
 
-@media (max-width: 600px) {
-    .gridOneOneOne {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* INDIVIDUAL ELEMENTS */
 
 .logoHero {
     transform: translate(0, 27.5%);
     position: relative;
     height: 1em;
+    z-index: 2;
+    mix-blend-mode: screen;
 }
 
 .laCambre:hover .word {
@@ -296,45 +300,59 @@ p {
     color: transparent;
 }
 
-.regularWeight .word, a {
-    font-weight: 400 !important;
+.regular .word, a {
+    font-weight: 400;
 }
 
 .noTextDeco .word, a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 .linkEmail:hover {
-    background-color: crimson;
+    background-color: #eb005e;
 }
-
 .linkEmail:hover .word {
     color: white;
 }
 
-.linkRessources:hover {
+.linkProducts:hover {
     background-color: greenyellow;
 }
-
-.linkRessources:hover .word {
+.linkProducts:hover .word {
     color: black;
 }
 
 .linkBehance:hover {
     background-color: #0046cb;
 }
-
 .linkBehance:hover .word {
+    color: white;
+}
+
+.linkInsta:hover {
+    background-color: #ff7a01;
+}
+
+.linkTiktok:hover {
+    background-color: #ff0050;
+}
+.linkTiktok:hover .word {
+    color: white;
+}
+
+.linkDribbble:hover {
+    background-color: #ED94D4;
+}
+
+.linkWebsite:hover {
+    background-color: #6a00ff;
+}
+.linkWebsite:hover .word {
     color: white;
 }
 
 .sizeOfH3 {
     font-size: 2rem;
-}
-
-.spacerSize {
-    display: block;
-    margin: 0.5rem 0;
 }
 
 .workBlanks {
@@ -351,6 +369,7 @@ p {
 
 @media (prefers-color-scheme: light) {
     .workTonan {
+        border: 1px solid hsl(0, 0%, 10%);
         filter: invert();
     }
 }
@@ -365,4 +384,10 @@ p {
 
 .workWittyChrome {
     background-image: url(imgs/WittyLogoChrome.jpeg);
+}
+
+.logoRenderImage {
+    background-image: url(imgs/LogoGlass.png);
+    height: 50dvw;
+    aspect-ratio: auto;
 }
