@@ -139,7 +139,7 @@ function setupResizeObserver() {
         const resizeObserver = new ResizeObserver(_.debounce(entries => {
             handleResize(entries);
             resolve(); // Resolve the Promise once the ResizeObserver is set up
-        }, 0));
+        }, 100));
         resizeObserver.observe(containerElement);
     });
 }
@@ -149,15 +149,15 @@ function setupResizeObserver() {
 // TEXT ANIMATION
 
 function animateText() {
+    
+    // gsap.to('.word', {
+    //     y: 0,
+    //     stagger: 0.025,
+    //     delay: 0,
+    //     duration: 0,
+    // })    
 
-    gsap.to('.word', {
-        y: 0,
-        stagger: 0.025,
-        delay: 0,
-        duration: 0,
-    })    
-
-    /*
+    
     const containers = gsap.utils.toArray('.container');
 
     containers.forEach(container => {
@@ -177,15 +177,8 @@ function animateText() {
             }
         });
     });
-    */
 }
 
 setupResizeObserver().then(() => {
     animateText();
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    setupResizeObserver().then(() => {
-        animateText();
-    });
-}, false);

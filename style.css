@@ -282,7 +282,6 @@ p {
 
 .instaLink .word {
     background-image: url(imgs/InstaGradient.svg);
-    background-color: var(--normal-text-color);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -295,7 +294,6 @@ p {
 }
 
 .instaLink:hover .word {
-    background-color: var(--boxes-color);
     background-image: url(imgs/InstaGradient.svg);
     color: transparent;
 }
@@ -329,8 +327,15 @@ p {
     color: white;
 }
 
+.linkInsta {
+    transition: background-image 400ms ease;
+    background-image: url(imgs/Empty.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 .linkInsta:hover {
-    background-color: #ff7a01;
+    background-image: url(imgs/InstaGradient.svg);
 }
 
 .linkTiktok:hover {
