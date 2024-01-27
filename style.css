@@ -336,6 +336,9 @@ p {
 }
 .linkInsta:hover {
     background-image: url(imgs/InstaGradient.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .linkTiktok:hover {

@@ -169,7 +169,7 @@ function animateText() {
             delay: 0.001,
             duration: 0,
             scrollTrigger: {
-                markers: true,
+                markers: false,
                 trigger: container,
                 start: 'top 90%',
                 end: 'bottom 10%',
