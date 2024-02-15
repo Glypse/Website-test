@@ -63,7 +63,7 @@ if (matchMedia('(pointer:fine)').matches) {
 
         requestAnimationFrame(animateCircles);
     }
-
+    
     animateCircles();
 };
 
@@ -106,7 +106,7 @@ elements.forEach(function(element) {
 // This would be a reference to the container element that contains split text
 const containerElement = document.body;
 // the SplitType instance
-const text = new SplitType('.splitMe', { types: 'lines, words' });
+const text = new SplitType('.splitMe', { types: 'lines, words', tagName: 'span' });
 // stores the previous width of the container element
 let previousContainerWidth = null;
 
@@ -157,7 +157,7 @@ function animateText() {
     // })    
 
     
-    const containers = gsap.utils.toArray('.container');
+    const containers = gsap.utils.toArray('h1, h2, h3, h4, h5, h6, p');
 
     containers.forEach(container => {
         const words = container.querySelectorAll('.word');
@@ -166,7 +166,8 @@ function animateText() {
             y: 0,
             stagger: 0.025,
             delay: 0.001,
-            duration: 0,
+            duration: 0.7,
+            ease: "power4.out",
             scrollTrigger: {
                 markers: false,
                 trigger: container,

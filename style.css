@@ -82,6 +82,7 @@ body {
 }
 
 /* LENIS */
+
 html.lenis {
     height: auto;
 }
@@ -112,8 +113,8 @@ html.lenis {
 
 .cursorCircle {
     position: fixed;
-    height: 24px;
-    width: 24px;
+    height: var(--cursorSize);
+    width: var(--cursorSize);
     border-radius: 50%;
     background-color: white;
     top: 0;
@@ -136,9 +137,9 @@ body:has(a:hover) .cursorCircle {
     clip-path: polygon(0 0, 100% 0, 100% 120%, 0% 120%);
 }
 
-.word, div.word, a .word, a div.word {
+.word {
     transform: translateY(120%);
-    transition: transform 700ms cubic-bezier(0.75, 0, 0.25, 1), color 400ms ease;
+    transition: color 400ms ease;
 }
 
 
@@ -382,10 +383,6 @@ p {
 }
 .linkWebsite:hover .word {
     color: white;
-}
-
-.sizeOfH3 {
-    font-size: 2rem;
 }
 
 .workBlanks {
