@@ -75,11 +75,11 @@ const lenis = new Lenis({
 duration: 1,
 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 })
-
+/*
 lenis.on('scroll', (e) => {
 console.log(e)
 })
-
+*/
 function raf(time) {
 lenis.raf(time)
 requestAnimationFrame(raf)
@@ -88,20 +88,17 @@ requestAnimationFrame(raf)
 requestAnimationFrame(raf)
 
 
-
 // SPLIT TYPE
 
 //ADD SPLITME TO ALL TEXT
 
 // Select all h1, h2, h3, h4, h5, h6, and p elements
-var elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+var elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, ol, ul, li");
 
 // Add the class "splitMe" to each selected element
 elements.forEach(function(element) {
     element.classList.add("splitMe");
 });
-  
-
 
 // This would be a reference to the container element that contains split text
 const containerElement = document.body;
@@ -144,20 +141,11 @@ function setupResizeObserver() {
 }
 
 
-
 // TEXT ANIMATION
 
 function animateText() {
-    
-    // gsap.to('.word', {
-    //     y: 0,
-    //     stagger: 0.025,
-    //     delay: 0,
-    //     duration: 0,
-    // })    
 
-    
-    const containers = gsap.utils.toArray('h1, h2, h3, h4, h5, h6, p');
+    const containers = gsap.utils.toArray('h1, h2, h3, h4, h5, h6, p, ol, ul, li');
 
     containers.forEach(container => {
         const words = container.querySelectorAll('.word');
@@ -171,8 +159,8 @@ function animateText() {
             scrollTrigger: {
                 markers: false,
                 trigger: container,
-                start: 'top 90%',
-                end: 'bottom 10%',
+                start: 'top 95%',
+                end: 'bottom 5%',
                 toggleActions: 'play reverse play reverse',
             }
         });

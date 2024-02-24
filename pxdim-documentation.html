@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pixel Disruptor in Motion documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="imgs/favicon.svg" rel="icon" type="image/svg+xml">
+</head>
+<body>
+    <div class="grid gridTwoOne">
+        <div class="container">
+            <h2 class="bold">Pixel Disruptor in Motion documentation</h2>
+        </div>
+        <div class="container">
+            <h2 style="text-align: end;">By <a href="https://glypse.design/" draggable="false" class="noTextDeco"><span class="bold"><span class="word"><img class="logoHero" srcset="imgs/logoAnimCropped.gif" draggable="false"></img></span> glypse</span></a></h2>
+        </div>
+    </div>
+
+    <div class="grid gridOneTwo">
+        <div class="container">
+            <h3><span class="bold">Thank you</span> for buying Pixel Disruptor in Motion!</h3>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>For more effects and graphic design products I made, <a draggable="false" href="https://shop.studioinnate.com/product-category/glypse/" class="linkProductsText">click here.</a></p>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p style="font-size: 6rem; text-align: center;">💻✨📹</p>
+        </div>
+        <div class="container">
+            <h3 class="bold">Table of contents</h3>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <a href="#installAndSetup" onclick="lenis.scrollTo('#installAndSetup')"><p>1. Installation & setup</p></a>
+            <a href="#motionTab" onclick="lenis.scrollTo('#motionTab')"><p>2. Motion tab</p></a>
+            <a href="#mapTab" onclick="lenis.scrollTo('#mapTab')"><p>3. Map tab</p></a>
+            <a href="#displacementTab" onclick="lenis.scrollTo('#displacementTab')"><p>4. Displacement tab</p></a>
+            <a href="#rotation" onclick="lenis.scrollTo('#rotation')"><p>5. Rotation</p></a>
+            <a href="#audioReactiveGroup" onclick="lenis.scrollTo('#audioReactiveGroup')"><p>6. Audio-reactivity</p></a>
+            <a href="#wiggles" onclick="lenis.scrollTo('#wiggles')"><p>7. Wiggles</p></a>
+            <a href="#extraEffects" onclick="lenis.scrollTo('#extraEffects')"><p>8. Extra effects</p></a>
+            <a href="#FAQ" onclick="lenis.scrollTo('#FAQ')"><p>9. FAQ</p></a>
+            <a href="#help" onclick="lenis.scrollTo('#help')"><p>10. Help</p></a>
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <div class="container" id="installAndSetup">
+            <h2 class="bold">Installation & setup</h2>
+            <div class="container">
+                <h3 class="bold">Installation</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>Do not have After Effects open during the installation.</p>
+                    <p>1. Download Pixel Disruptor in Motion <a href="https://shop.studioinnate.com/my-account/downloads/" draggable="false" target="_blank" class="SIWebsite">from Studio Innate's website</a>;</p>
+                    <p>2. Download Displacer Pro <a href="https://www.plugineverything.com/displacer-pro" draggable="false" target="_blank" class="PlugEvWebsite">from Plugin Everything's website.</a> Do that by clicking on the "Download Free @ GUMROAD" button, input 0 in the price, Add to cart, set your email adress, and click get.</p>
+                    <p>Alternatively, if you have an Aescripts account and use the Aescripts app, installing it that way is easier. If you do so, there's no need to install Displacer Pro manually like written below;</p>
+            </div>
+            <div class="container">
+                <h3>Windows</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>1. Extract both folders by right-clicking and pressing "Extract All", one at a time</p>
+                    <p>2. Inside the Displacer Pro folder, navigate to the DisplacerPro.aex file for Windows and copy it;</p>
+                    <p>3. Navigate to "Program Files\Adobe\Adobe After Effects &lt;YEAR&gt;\Support Files\Plug-ins" and paste the DisplacerPro.aex file;</p>
+                    <p>4. Back in your downloads, inside the Pixel Disruptor in Motion folder, copy all the files except the TUTORIAL.txt file (meaning the Pixel Disruptor ScriptUI, MAP X, MAP Y and Content effects files);</p>
+                    <p>5. Navigate to "Program Files\Adobe\Adobe After Effects &lt;YEAR&gt;\Support Files\Scripts\ScriptUI Panels" and paste the four files there;</p>
+            </div>
+            <div class="container">
+                <h3>MacOS</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>1. Open both zip archives, one at a time;</p>
+                    <p>2. Inside de Displacer Pro folder, navigate to the DisplacerPro.plugin file for macOS and copy it;</p>
+                    <p>3. Navigate to "Applications/Adobe After Effects &lt;YEAR&gt;/Plug-ins" and paste the DisplacerPro.plugin file;</p>
+                    <p>4. Back in your downloads, inside the Pixel Disruptor in Motion folder, copy all the files except the TUTORIAL.txt file (meaning the Pixel Disruptor ScriptUI, MAP X, MAP Y and Content effects files);</p>
+                    <p>5. Navigate to "Applications/Adobe After Effects &lt;YEAR&gt;/Scripts/ScriptUI Panels" and paste the four files there;</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">After Effects setup</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>1. Launch After Effects;</p>
+                    <p>2. Go to "Preferences &gt; Scripting & Expressions" and check "Allow Scripts to Write Files and Access Network".
+                    <br>This is in order to make the "Tutorial" button work;</p>
+                    <p>3. Inside your composition, make sure to have a solid backgound: <span class="bold">not the default background color.</span>
+                    <br>To do this, make sure to have a solid covering all of the composition, or any other non-transparent layer;</p>
+                    <p>4. Go to "Window" and scroll all the way down until you see <span class="bold">Pixel Disruptor &lt;VERSION, ScriptUI, ...&gt;</span>, and click it;</p>
+                    <p>5. Click on the "Disrupt your pixels!" button.
+                    <br><span class="bold">All the effect's settings are located on the PXD FX layer in yellow.</span></p>
+            </div>
+        </div>
+
+        <div class="container" id="motionTab">
+            <h2 class="bold">Motion tab</h2>
+            <div class="container">
+                <h3 class="bold">Looping</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When checked, the disruption will loop between the start and end point of your timeline.</p>
+                <p>This does not work on the properties affected by the audio-reactive features when they're enabled.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Automatic evolution</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When checked, the effect will automatically animate over time. When unchecked, use the <a href="#manualEvolution" onclick="lenis.scrollTo('#manualEvolution')" class="regular">Manual evolution</a>.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3 id="speedOfAutomaticEvolution">Speed of automatic evolution</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls the speed of the evolution over time.</p>
+                <p>This is dependant on the lenght of the composition; a speed of one will be slower in a 30 seconds composition than in a 10 seconds composition.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3 id="manualEvolution">Manual evolution</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When Automatic evolution is unchecked, Manual evolution is used to drive the evolution over time of the effect. Controlled using keyframes.</p>
+                <p>If you want your manual evolution to loop after a set amount of rotations, have Looping checked, and set the <a href="#speedOfAutomaticEvolution" onclick="lenis.scrollTo('#speedOfAutomaticEvolution')" class="regular">Speed of automatic evolution</a> to the number of full rotations after which you want the evolution to loop.</p>
+                <p>If your Manual evolution is looped, say to 5 full rotations, going to 10 full rotations will make it loop twice.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Wiggle evolution group</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Wiggles the evolution over time of the effect.</p>
+                <p><a href="#wiggles" onclick="lenis.scrollTo('#wiggles')" class="regular">Refer to wiggles.</a></p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Seed</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Pixel Disruptor in Motion is an effect randomly generated according to the seed. Change the seed to get a different randomly generated result ; <span class="bold">all of your parameters will be maintained, but you will get a different result.</span></p>
+            </div>
+        </div>
+
+        <div class="container" id="mapTab">
+            <h2 class="bold">Map tab</h2>
+            <div class="container">
+                <h3 class="bold">Style</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Drives the kind of output you will get;
+                    <br>Moving cells will put your animation inside lots of squares, and those squares will be moving around.
+                    <br>Changing cells will put your animation inside lots of squares, and the content of these squares will be moving around.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Contrast amplification</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When set to a high number like 10, the movement of the squares will go from one extreme to the other extreme while going faster through the center (in terms of position).</p>
+                <p>When set to a low number like 0, the movement of the squares will go from one point to the other in a linear fashion.</p>
+                <p>Think of it as keyframes: a high number means a tighter easing, while a lower number means a more linear easing in between the positions.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Size</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Drives the scale of the effect. Not to be confused with the <a href="#displacementAmount" onclick="lenis.scrollTo('#displacementAmount')" class="regular">Displacement amount</a>.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Size X/Y ratio</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how squished/stretched the effect is.</p>
+                <p>A number lower than 1 will give you a horizontally tight effect.</p>
+                <p>1 will get you perfect squares.</p>
+                <p>A number higher than 1 will give you a vertically tight effect.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Complexity</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Drives how complex the output is, not through time.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Wiggle complexity group</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Wiggles the complexity over time of the effect.</p>
+                <p><a href="#wiggles" onclick="lenis.scrollTo('#wiggles')" class="regular">Refer to wiggles.</a></p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Complexity influence</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how much each layer of complexity is visible. A low number will output a visual complexity near to 1, while a very high number will make it so that only the very complex layer of the effect is visible.</p>
+                <p>I recommend to keep between 50% and 80% for the expected output.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Partially disabling group</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3 class="bold" id="partiallyDisabling">Partially disabling</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When checked, the effect will affect certain parts of the image.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Disabling threshold</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>0-255 value. 128 means that only half of the image is affected by Pixel Disruptor. A higher number means less of the image is affected.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Disabling threshold</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Wiggles the disabling threshold over time of the effect.</p>
+                <p><a href="#wiggles" onclick="lenis.scrollTo('#wiggles')" class="regular">Refer to wiggles.</a></p>
+            </div>
+        </div>
+        
+        <div class="container" id="displacementTab">
+            <h2 class="bold">Displacement tab</h2>
+            <div class="container">
+                <h3 class="bold" id="displacementAmount">Displacement amount (X and Y)</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how much the effect affects the content under, on each axis (X is horizontal, Y is vertical).</p>
+                <p>A number further from 0 will affect more the content under.</p>
+                <p>You can go into negative numbers.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Wiggle displacement group</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Wiggles the displacement amount over time of the effect.</p>
+                <p><a href="#wiggles" onclick="lenis.scrollTo('#wiggles')" class="regular">Refer to wiggles.</a></p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Chromatic aberration</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls the amount of chromatic aberration on each color channel (red, green and blue).</p>
+                <p>A higher number means that this color channel is less affected by the effect. 1 means the color channel is completely unaffected by the effect.</p>
+                <p>Combine the values to get interesting results, like Red 0.40, Green 0.20, Blue 0.00.</p>
+                <p>Instead of putting all three values to something higher than 0, simply decrease the <a href="#displacementAmount" onclick="lenis.scrollTo('#displacementAmount')">Displacement amount</a>. In other words, try to keep at least one of the three values to 0.</p>
+            </div>
+            <div class="container">
+                <h3>Edge behavior</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how the edge of the video reacts when affected by the effect.</p>
+                <p><span class="bold">None</span> will show the composition's backgound color.</p>
+                <p><span class="bold">Repeat</span> will repeat the left part of the video over to the right, the bottop over to the top, ...</p>
+                <p><span class="bold">Mirror repeat</span> will mirror the edge over itself.</p>
+                <p><span class="bold">Edge repeat</span> will extend the last pixel next to the edge until the point where it is affected by the effect. <span class="bold">Recommended.</span></p>
+            </div>
+        </div>
+
+        <div class="container" id="rotation">
+            <h3 class="bold">Rotation</h3>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>Rotates the whole effect. Not the content under.</p>
+        </div>
+
+        <div class="container" id="audioReactiveGroup">
+            <h2 class="bold">Audio-reactive group</h2>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>1. Make sure you have at least one layer with audio enabled in your composition;</p>
+            <p>2. Click the "Allow for audio-reactive features" button.
+                <br>Once this button is clikced, any changes in the composition's audio will not affect the effect;</p>
+            <p>3. You can customise how the loudness of the song affects the effect by customizing its expressions.
+                <br>To do that, select the "PXD A-R Layer &gt; Effects &gt; PXD Audio Keyframes &gt; Slider" and open it until you see the word "value" appear in your timeline.
+                <br>Activate "Show Post-Expression Graph" (little graph icon) next to "Enable Expression" (little equals icon).
+                <br>Click on the "value" word. There, you will find a few pre-made expressions that you can enable by removing the // before them. Don't remove the // before the comments.
+                <br>You can combine multiple of these expression by putting one inside of the other, replacing of the "value" word inside said expression.</p>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <div class="container">
+                <h3 class="bold">A-R evolution & evolution multiplier</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When turned on, let the loudness of the song drive the evolution of the effect.</p>
+                <p>A higher number means the louder the song, the faster the effect evolves.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">A-R complexity & complexity divider</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When turned on, let the loudness of the song drive the complexity of the effect.</p>
+                <p>A higher number means the louder the song, the less the effect is complex.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">A-R displacement and displacement divider</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When turned on, let the loudness of the song drive the displacement amount of the effect.</p>
+                <p>A higher number means the louder the song, the less the content underneath is displaced.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">A-R partially disable and disable multiplier</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p class="bold">For this to work, you needd to have the <a href="#partiallyDisabling" onclick="lenis.scrollTo('#partiallyDisabling')">Partially disable</a> enabled.</p>
+                <p>When turned on, let the loudness of the song drive how much of the image is unaffected by the effect.</p>
+                <p>A higher number means the louder the song, the more of the content underneath is affected.</p>
+            </div>
+        </div>
+
+        <div class="container" id="wiggles">
+            <h2 class="bold">Wiggles</h2>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <h3 class="bold">What does a wiggle do?</h3>
+            <p>When you activate a wiggle, the property it is referencing is going to randomly change, by a certain amount, at a certain speed.
+                <br><span class="bold">How much?</span>
+                <br>By the amplitude amount.
+                <br><span class="bold">At what speed?</span>
+                <br>By the frequency amount.
+            </p>
+        </div>
+
+        <div class="container" id="extraEffects">
+            <h2 class="bold">Extra effects</h2>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>To activate any of these effects, simply click on the empty square next to their name, where an "fx" should appear.</p>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>All of those are basic After Effects effects. Using them is very straightforward.</p>
+        </div>
+
+        <div class="container" id="FAQ">
+            <h2 class="bold">FAQ</h2>
+            <div class="container">
+                <h3 class="bold">I am using a cracked version of After Effects and Pixel Disruptor in Motion isn't working.</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>It is probably because of your crack. Send me a message on <a href="https://www.instagram.com/glypse.design/" draggable="false" target="_blank" class="instaLink">Instagram at @glypse.design</a> or via <a href="mailto:hello@glypse.design" draggable="false" class="linkEmailText">email at hello@glypse.design</a>. I know how to fix this. I am in no way affiliated with Adobe, I will not report you, you risk no danger.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Clicking "Disrupt your pixels!" creates the layers but doesn't apply the effects.</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>This shouldn't happen. Please contact me via <a href="https://www.instagram.com/glypse.design/" draggable="false" target="_blank" class="instaLink">Instagram at @glypse.design</a> or <a href="mailto:hello@glypse.design" draggable="false" class="linkEmailText">email at hello@glypse.design</a>. In the meantime, here is a quick fix:</p>
+                <p>1. Copy the three animation presets files (meaning the Pixel Disruptor ScriptUI, MAP X, MAP Y and Content effects files) from your Pixel Disrutpor in Motion download folder;</p>
+                <p>2. Paste them inside the User Presets folder inside your documents folder:</p>
+                <p>macOS: /Documents/Adobe/After Effects &lt;YEAR&gt;/User Presets</p>
+                <p>Windows: Program Files\Adobe\Adobe After Effects &lt;YEAR&gt;\Support Files\User Presets\</p>
+                <p>3. Launch After Effects;</p>
+                <p>4. Inside the "Effects & Presets" panel, search "PXD";</p>
+                <p>5. Select each of the three layers generated and apply them their respective effect, one by one.</p>
+            </div>
+        </div>
+
+        <div class="container" id="help" style="text-align: center;">
+            <h2 class="bold">Nothing is working? Contact me!</h2>
+            <h3 class="bold"><a href="https://www.instagram.com/glypse.design/" draggable="false" target="_blank" class="instaLink">@glypse.design</a></h3>
+            <h3><a href="mailto:hello@glypse.design" draggable="false" target="_blank" class="linkEmailText">hello@glypse.design</a></h3>
+        </div>
+
+    </div>  
+
+    <div align="center">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CwIPnY3t3In/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px); "><div style="padding:16px;"> <a href="https://www.instagram.com/reel/CwIPnY3t3In/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/CwIPnY3t3In/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Sacha aka. glypse (@glypse.design)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
