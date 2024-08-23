@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ink Drops In Motion documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="imgs/favicon.svg" rel="icon" type="image/svg+xml">
+</head>
+<body class="textPage">
+    <div class="grid gridTwoOne">
+        <div class="container">
+            <h2 class="bold">Ink Drops In Motion documentation</h2>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>Ink Drops In Motion's current version is <span class="bold">V2.0</span>. If you're using a previous version, make sure to update (delete the old files and <a href="#installAndSetup" onclick="lenis.scrollTo('#installAndSetup')">install the new ones</a>). No need to update Displacer Pro.</p>
+        </div>
+        <div class="container">
+            <h2 style="text-align: end;">By <a href="https://glypse.design/" draggable="false" class="noTextDeco"><span class="bold"><span class="word"><img class="logoHero" srcset="imgs/logoAnimCropped.gif" draggable="false"></img></span> glypse</span></a></h2>
+        </div>
+    </div>
+
+    <div class="grid gridOneTwo">
+        <div class="container">
+            <h3><span class="bold">Thank you</span> for buying Ink Drops In Motion!</h3>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>For more effects and graphic design products I made, <a draggable="false" href="https://shop.studioinnate.com/product-category/glypse/" class="linkProductsText">click here.</a></p>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p style="font-size: 6rem; text-align: center;">💧✨📹</p>
+        </div>
+        <div class="container">
+            <h3 class="bold">Table of contents</h3>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <a href="#installAndSetup" onclick="lenis.scrollTo('#installAndSetup')"><p>1. Installation & setup</p></a>
+            <a href="#motionTab" onclick="lenis.scrollTo('#motionTab')"><p>2. Motion tab</p></a>
+            <a href="#mapTab" onclick="lenis.scrollTo('#mapTab')"><p>3. Map tab</p></a>
+            <a href="#displacementTab" onclick="lenis.scrollTo('#displacementTab')"><p>4. Displacement tab</p></a>
+            <a href="#audioReactiveTab" onclick="lenis.scrollTo('#audioReactiveTab')"><p>5. Audio-reactivity</p></a>
+            <a href="#FAQ" onclick="lenis.scrollTo('#FAQ')"><p>6. FAQ</p></a>
+            <a href="#help" onclick="lenis.scrollTo('#help')"><p>7. Help</p></a>
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <div class="container" id="installAndSetup">
+            <h2 class="bold">Installation & setup</h2>
+            <div class="container">
+                <h3 class="bold">Installation</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>Do not have After Effects open during the installation.</p>
+                    <p>1. Download Ink Drops In Motion <a href="https://shop.studioinnate.com/my-account/downloads/" draggable="false" target="_blank" class="SIWebsite">from Studio Innate's website</a>;</p>
+                    <p>2. Download Displacer Pro <a href="https://www.plugineverything.com/displacer-pro" draggable="false" target="_blank" class="PlugEvWebsite">from Plugin Everything's website.</a> Do that by clicking on the "Download Free @ GUMROAD" button, input 0 in the price, Add to cart, set your email adress, and click get.</p>
+                    <p>Alternatively, if you have an Aescripts account and use the Aescripts app, installing it that way is easier. If you do so, there's no need to install Displacer Pro manually like written below;</p>
+            </div>
+            <div class="container">
+                <h3>Windows</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>1. Extract both folders by right-clicking and pressing "Extract All", one at a time</p>
+                    <p>2. Inside the Displacer Pro folder, navigate to the DisplacerPro.aex file for Windows and copy it;</p>
+                    <p>3. Navigate to "Program Files\Adobe\Adobe After Effects &lt;YEAR&gt;\Support Files\Plug-ins" and paste the DisplacerPro.aex file;</p>
+                    <p>4. Back in your downloads, inside the Ink Drops In Motion folder, copy all the files except the TUTORIAL.txt and the INK DROPS IN MOTION TEMPLATE files (meaning the the .jsx and the three .ffx files);</p>
+                    <p>5. Navigate to "Program Files\Adobe\Adobe After Effects &lt;YEAR&gt;\Support Files\Scripts\ScriptUI Panels" and paste the four files there;</p>
+            </div>
+            <div class="container">
+                <h3>MacOS</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>1. Open both zip archives, one at a time;</p>
+                    <p>2. Inside de Displacer Pro folder, navigate to the DisplacerPro.plugin file for macOS and copy it;</p>
+                    <p>3. Navigate to "Applications/Adobe After Effects &lt;YEAR&gt;/Plug-ins" and paste the DisplacerPro.plugin file;</p>
+                    <p>4. Back in your downloads, inside the Ink Drops In Motion folder, copy all the files except the TUTORIAL.txt and the INK DROPS IN MOTION TEMPLATE files (meaning the the .jsx and the three .ffx files);</p>
+                    <p>5. Navigate to "Applications/Adobe After Effects &lt;YEAR&gt;/Scripts/ScriptUI Panels" and paste the four files there;</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">After Effects setup</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>1. Launch After Effects;</p>
+                    <p>2. Go to "Preferences &gt; Scripting & Expressions" and check "Allow Scripts to Write Files and Access Network".
+                    <br>This is in order to make the "Tutorial" button work;</p>
+                    <p>3. Inside your composition, make sure to have a solid background: <span class="bold">not the default background color.</span>
+                    <br>To do this, make sure to have a solid covering all of the composition, or any other non-transparent layer;</p>
+                    <p>4. Go to "Window" and scroll all the way down until you see <span class="bold">Ink Drops In Motion 2.0</span>, and click it;</p>
+                    <p>5. Click on the "Let the ink drop!" button.
+                    <br><span class="bold">All the effect's settings are located on the IDIM FX layer in yellow.</span></p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Template file</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>If for some reason the "Let the ink drop!" button doesn't work properly, or if you simply prefer to use a template, you can use the template file.</p>
+                <p>Double-click on it, do your thing, save it. Keep the template file to be reused. You can of course change everything about it, like the composition size, framerate, bit depth, ...</p>
+            </div>
+        </div>
+
+        <div class="container" id="motionTab">
+            <h2 class="bold">Motion tab</h2>
+            <div class="container">
+                <h3 class="bold">Looping</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When checked, the disruption will loop between the start and end point of your timeline.</p>
+                <p>This does not work on the properties affected by the audio-reactive features when they're enabled.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Automatic evolution</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When checked, the effect will automatically animate over time. When unchecked, use the <a href="#manualEvolution" onclick="lenis.scrollTo('#manualEvolution')" class="regular">Manual evolution</a>.</p>
+                <p>This setting is discarded when <a href="#arEvolution" onclick="lenis.scrollTo('#arEvolution')" class="regular">A-R evolution</a> is enabled.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3 id="speedOfAutomaticEvolution">Speed of automatic evolution</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls the speed of the evolution over time.</p>
+                <p>This is dependant on the lenght of the composition; a speed of 5 will be slower in a 30 seconds composition than in a 10 seconds composition.</p>
+                <p>This also affects the speed of the <a href="#arEvolution" onclick="lenis.scrollTo('#arEvolution')" class="regular">A-R evolution</a> when it is enabled.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3 id="manualEvolution">Manual evolution</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When Automatic evolution is unchecked, Manual evolution is used to drive the evolution over time of the effect. Controlled using keyframes.</p>
+                <p>If you want your manual evolution to loop after a set amount of rotations, have Looping checked, and set the <a href="#speedOfAutomaticEvolution" onclick="lenis.scrollTo('#speedOfAutomaticEvolution')" class="regular">Speed of automatic evolution</a> to the number of full rotations after which you want the evolution to loop.</p>
+                <p>If your Manual evolution is looped, say to 5 full rotations, going to 10 full rotations will make it loop twice.</p>
+                <p>This setting is discarded when <a href="#arEvolution" onclick="lenis.scrollTo('#arEvolution')" class="regular">A-R evolution</a> is enabled.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            </div>
+            <div class="container">
+                <h3 class="bold">Seed</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Ink Drops In Motion is an effect randomly generated according to the seed. Change the seed to get a different randomly generated result ; <span class="bold">all of your parameters will be maintained, but you will get a different result.</span></p>
+            </div>
+        </div>
+
+        <div class="container" id="mapTab">
+            <h2 class="bold">Map tab</h2>
+            <div class="container" id="gamma">
+                <h3 class="bold">Gamma (line thickness)</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Dictates the thickness of each line. I recommend to leave this setting pretty low, unless you're using <a href="#grain" onclick="lenis.scrollTo('#grain')" class="regular">grain</a>.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Size</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Drives the scale of the effect. Not to be confused with the <a href="#displacementAmount" onclick="lenis.scrollTo('#displacementAmount')" class="regular">Displacement amount</a>.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Size X/Y ratio</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how squished/stretched the effect is.</p>
+                <p>A number lower than 1 will give you a horizontally tight effect.</p>
+                <p>1 will get you a homogeneous ratio.</p>
+                <p>A number higher than 1 will give you a vertically tight effect.</p>
+            </div>
+            <div class="container" id="grain">
+                <h3 class="bold">Grain</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Enables or disables grain.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Grain size</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Drives the size of the grain. Around 20 with a high Grain strength makes for a good acid effect.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3>Grain strength</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how much the grain is visible. Play with this setting along with <a href="#gamma" onclick="lenis.scrollTo('#gamma')" class="regular">Gamma</a> for great results.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Effects</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Effects apply to the effect, not to your content.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <div class="container">
+                    <h3 class="bold">Posterize</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>Enable or disable posterization.</p>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <h3>Posterization</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>Drives how many separate "layers" the effect is split into.</p>
+                </div>
+                <div class="container">
+                    <h3 class="bold">Pixelise</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>Enable or disable pixelisation.</p>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <h3>Pixel size X & Y</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>Drives the width (X) and height (Y) of each pixel.</p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" id="displacementTab">
+            <h2 class="bold">Displacement tab</h2>
+            <div class="container" id="displacementAmount">
+                <h3 class="bold">Displace X & Y</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how much the effect affects the content under, on each axis (X is horizontal, Y is vertical).</p>
+                <p>A number further from 0 will affect more the content under.</p>
+                <p>You can go into negative numbers.</p>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <h3 class="bold" id="displacementAmount">Displace angle</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how much the effect affects the content under, on a rotational axis.</p>
+                <p>This means the effect affects less in the center than on the sides, though it stills gives a pretty organic result compared to the X and Y options.</p>
+            </div>
+            <div class="container" id="chromaticAberration">
+                <h3 class="bold">Chromatic aberration</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls the amount of chromatic aberration on each color channel (red, green and blue).</p>
+                <p>A higher number means that this color channel is less affected by the effect. <span class="bold">1 means the color channel is completely unaffected by the effect.</span></p>
+                <p>Combine the values to get interesting results, like Red 0.40, Green 0.20, Blue 0.00.</p>
+                <p>Instead of putting all three values to something higher than 0, simply decrease the <a href="#displacementAmount" onclick="lenis.scrollTo('#displacementAmount')">Displacement amount</a>. In other words, try to keep at least one of the three values to 0.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">Iterations</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Iterations blend between the effect and the original unaffected content in an organic way. Use it, especially with <a href="#chromaticAberration" onclick="lenis.scrollTo('#chromaticAberration')">chromatic aberration</a>, for smoother, fluid results.</p>
+            </div>
+            <div class="container">
+                <h3>Edge behavior</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>Controls how the edge of the video reacts when affected by the effect.</p>
+                <p><span class="bold">None</span> will show the composition's background color.</p>
+                <p><span class="bold">Repeat</span> will repeat the left part of the video over to the right, the bottop over to the top, ...</p>
+                <p><span class="bold">Mirror repeat</span> will mirror the edge over itself.</p>
+                <p><span class="bold">Edge repeat</span> will extend the last pixel next to the edge until the point where it is affected by the effect. <span class="bold">Recommended.</span></p>
+            </div>
+        </div>
+
+        <div class="container" id="audioReactiveTab">
+            <h2 class="bold">Audio-reactive tab</h2>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <p>1. Make sure you have at least one layer with audio enabled in your composition;</p>
+            <p>2. Click the "Allow for audio-reactive features" button.
+                <br>Once this button is clikced, any changes in the composition's audio will not affect the effect.</p>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <div class="container" id="audioAdjusting">
+                <h3 class="bold">Audio adjusting</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <div class="container">
+                    <h3 class="bold">Audio smoothing</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>This smoothes your audio (not auditively, just to the effect), to make it less jittery.</p>
+                </div>
+                <div class="container">
+                    <h3 class="bold">Audio contrast</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <h3>Audio contrast type</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p><span class="bold">None</span> completely disables audio contrast.</p>
+                    <p><span class="bold">Linear</span> gets rid of the audio's influcence the more Audio contrast low is up, and maxes out the audio's influence the more Audio contrast high is down.</p>
+                    <p><span class="bold">Lean towards low</span> does the same as Linear, but pushes all of the middle values down a bit. This mean the sound will have to be very loud to have effect, otherwise it will have little effect, until it is just completely cut out by the Audio contrast low.</p>
+                    <p><span class="bold">Lean both ways (increase contrast)</span> does both Lean towards low and lean towards high at the same time.</p>
+                    <p><span class="bold">Lean towards high</span> does the same as Linear, but pushes all of the middle values up a bit. This mean the sound will have to be very quiet to not have effect, until it is just completely maxed out by the Audio contrast high.</p>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <h3 id="audioContrastLow&High">Audio contrast low & high</h3>
+                    <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                    <p>Any value lower than <span class="bold">Audio contrast low</span> will be cut out, cutting the sound's influence on the effect.</p>
+                    <p>Any value highrt than <span class="bold">Audio contrast high</span> will be maxed out, maxing the sound's influence on the effect.</p>
+                    <p><span class="bold">Both are measured in positive decibels.</span> To see the audio's waveform, open in your composition's timeline IDIM A-R Layer &gt; Effects &gt; IDIM Audio Keyframes &gt; Slider, and click the "Show Post-Expression Graph" button (the small graph icon next to the = icon). Then, go into the Graph Editor.</p>
+                </div>
+            </div>
+            <div class="container" id="arEvolution">
+                <h3 class="bold">A-R evolution</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When turned on, let the loudness of the song drive the evolution of the effect.</p>
+                <p>The overall speed is controlled by the <a href="#speedOfAutomaticEvolution" onclick="lenis.scrollTo('#speedOfAutomaticEvolution')">Speed of automatic evolution</a>.</p>
+            </div>
+            <div class="container">
+                <h3 class="bold">A-R displacement</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>When turned on, let the loudness of the song drive the displacement amount of the effect.</p>
+                <p>The <a href="#displacementAmount" onclick="lenis.scrollTo('#displacementAmount')">Displacement amount</a> controls the maximum displacement.</p>
+            </div>
+        </div>
+
+        <div class="container" id="FAQ">
+            <h2 class="bold">FAQ</h2>
+            <div class="container">
+                <h3 class="bold">Clicking "Let the ink drop!" creates the layers but doesn't apply the effects.</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>This shouldn't happen. Please contact me via <a href="https://www.instagram.com/glypse.design/" draggable="false" target="_blank" class="instaLink">Instagram at @glypse.design</a> or <a href="mailto:hello@glypse.design" draggable="false" class="linkEmailText">email at hello@glypse.design</a>. In the meantime, here is a quick fix:</p>
+                <p>1. Copy the three animation presets files (meaning the MAP , FX and A-R files) from your Ink Drops In Motion download folder;</p>
+                <p>2. Paste them inside the User Presets folder inside your documents folder:</p>
+                <p>macOS: /Documents/Adobe/After Effects &lt;YEAR&gt;/User Presets</p>
+                <p>Windows: Program Files\Adobe\Adobe After Effects &lt;YEAR&gt;\Support Files\User Presets\</p>
+                <p>3. Launch After Effects;</p>
+                <p>4. Inside the "Effects & Presets" panel, search "IDIM";</p>
+                <p>5. Select each of the layers generated and apply them their respective effect, one by one.</p>
+                <p>This will render the <a href="#audioAdjusting" onclick="lenis.scrollTo('#audioAdjusting')">Audio adjusting</a> broken.</p>
+            </div>
+            <div class="container">
+                <h3>The "Allow for audio-reactive features" doesn't work properly.</h3>
+                <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+                <p>This might be because you are using an older version of After Effects and/or in a different language. This is most likely an easy fix; contact me via <a href="https://www.instagram.com/glypse.design/" draggable="false" target="_blank" class="instaLink">Instagram at @glypse.design</a> or <a href="mailto:hello@glypse.design" draggable="false" class="linkEmailText">email at hello@glypse.design</a> with your After Effects version and language.</p>
+            </div>
+        </div>
+
+        <div class="container" id="help" style="text-align: center;">
+            <h2 class="bold">Any questions? Having problems? Contact me!</h2>
+            <div style="font-size: 1.25rem;" class="spacingDiv"></div>
+            <h3 class="bold"><a href="https://www.instagram.com/glypse.design/" draggable="false" target="_blank" class="instaLink">@glypse.design</a></h3>
+            <h3><a href="mailto:hello@glypse.design" draggable="false" target="_blank" class="linkEmailText">hello@glypse.design</a></h3>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
