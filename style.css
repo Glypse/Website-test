@@ -304,6 +304,10 @@ p {
     color: greenyellow;
 }
 
+.typographyLink:hover .word{
+    color: rgb(255, 51, 0);
+}
+
 .moGraphLink:hover .word{
     color: rgb(255, 47, 120);
 }
@@ -444,6 +448,18 @@ p {
 
 .workWittyChrome {
     background-image: url(imgs/WittyLogoChrome.jpeg);
+}
+
+.workSekerith {
+    background-image: url(imgs/Sekerith.jpg);
+}
+
+.workSekerithKeyboard {
+    background-image: url(imgs/SekerithKeyboard.png);
+}
+
+.workPxd {
+    background-image: url(imgs/Pxd.jpg);
 }
 
 .logoRenderImage {
